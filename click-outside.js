@@ -18,6 +18,7 @@ function handleCardButtonClick(event) {
   `;
   modalOuter.classList.add("open");
 }
+
 function closeModal() {
   modalOuter.classList.remove("open");
 }
@@ -25,6 +26,7 @@ function closeModal() {
 cardBtns.forEach((btn) => {
   btn.addEventListener("click", handleCardButtonClick);
 });
+
 modalOuter.addEventListener("click", (event) => {
   const isOutside = !event.target.closest(".modal-inner");
   if (isOutside) {
